@@ -4,23 +4,30 @@ import { FiCoffee } from 'react-icons/fi';
 import { HiOutlineChartBar, HiOutlineFire, HiOutlineUsers } from 'react-icons/hi';
 import ProgressBar from '@/components/shared/ProgressBar';
 
+import Image from 'next/image';
+
 const AboutSection = () => {
   return (
     <>
       <SectionTitle>About Me</SectionTitle>
 
-      <div className="grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:gap-8">
+      <div className="">
         {/* Bio */}
         <div className="">
-          <p className="text-justify">
-            Hi, I am Md Mostafizur Rahman, I am a fullstack developer. I work from Dhaka, Bangladesh. I have rich
-            experience in building, designing & customizing website, web apps, mobile apps etc.
+          <p className="indent-3 leading-8">
+            Hi there! My name is Oleksandr Katerynchuk. I am a Salesforce B2C Commerce (SFCC) TechLead with extensive experience in e-commerce development.
           </p>
-          <Button className="mt-5">Download CV</Button>
+          <p className="indent-3 leading-8">
+            I specialize in building scalable and efficient Salesforce Commerce Cloud <span className="nowrap">e-commerce</span> solutions using SFCC.
+          </p>
+          <p className="indent-3 leading-8">
+            I have experience with PWA Kit, SFRA and SiteGenesis architectures. I worked on numerous projects for a very well-known brands. I did different kind of integrations with third-party systems, and performance optimization.
+          </p>
+          {/* <Button className="mt-5">Download CV</Button> */}
         </div>
 
         {/* Skills */}
-        <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+        {/* <div className="grid grid-cols-2 gap-x-6 gap-y-4">
           <div className="">
             <div className="mb-3 flex justify-between">
               <h6 className="font-semibold">Backend</h6>
@@ -50,48 +57,100 @@ const AboutSection = () => {
             </div>
             <ProgressBar color="green" progress={80} />
           </div>
-        </div>
+        </div> */}
       </div>
 
-      {/* Overview */}
-      <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <HiOutlineFire size={50} />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">20+</h2>
-            <p className="mt-1">Projects Completed</p>
-          </div>
+      {/* Certifications */}
+      <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-5">
+        <div className="flex items-center justify-center p-4 transition-transform hover:scale-105">
+          <Image
+            src="/images/badges/sf_b2c_architect.webp"
+            alt="Certified B2C Commerce Architect"
+            width={150}
+            height={150}
+            className="h-auto w-auto"
+          />
         </div>
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <FiCoffee size={50} />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">30+</h2>
-            <p className="mt-1">Cup of Coffee</p>
-          </div>
+        <div className="flex items-center justify-center p-4 transition-transform hover:scale-105">
+          <Image
+            src="/images/badges/sf_b2c_developer.webp"
+            alt="Certified B2C Commerce Developer"
+            width={150}
+            height={150}
+            className="h-auto w-auto"
+          />
         </div>
-
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <HiOutlineUsers size={50} />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">15+</h2>
-            <p className="mt-1">Satisfied clients</p>
-          </div>
+        <div className="flex items-center justify-center p-4 transition-transform hover:scale-105">
+          <Image
+            src="/images/badges/agentforce_legend.webp"
+            alt="Agentforce Legend 2025"
+            width={150}
+            height={150}
+            className="h-auto w-auto"
+          />
         </div>
-
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <HiOutlineChartBar size={50} />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">5+</h2>
-            <p className="mt-1">Years of experience</p>
-          </div>
+        <div className="flex items-center justify-center p-4 transition-transform hover:scale-105">
+          <Image
+            src="/images/badges/sf_agentforce.webp"
+            alt="Certified Agentforce Specialist"
+            width={150}
+            height={150}
+            className="h-auto w-auto"
+          />
+        </div>
+        <div className="flex items-center justify-center p-4 transition-transform hover:scale-105">
+          <Image
+            src="/images/badges/sf_js_developer.webp"
+            alt="Certified JavaScript Developer"
+            width={150}
+            height={150}
+            className="h-auto w-auto"
+          />
+        </div>
+        <div className="flex items-center justify-center p-4 transition-transform hover:scale-105">
+          <Image
+            src="/images/badges/sf_einstein_accredited.webp"
+            alt="Accredited Commerce Cloud Einstein"
+            width={150}
+            height={150}
+            className="h-auto w-auto"
+          />
+        </div>
+        <div className="flex items-center justify-center p-4 transition-transform hover:scale-105">
+          <Image
+            src="/images/badges/sf_platform_foundations.webp"
+            alt="Salesforce Platform Foundations"
+            width={150}
+            height={150}
+            className="h-auto w-auto"
+          />
+        </div>
+        <div className="flex items-center justify-center p-4 transition-transform hover:scale-105">
+          <Image
+            src="/images/badges/sf_ai_associate.webp"
+            alt="Certified AI Associate"
+            width={150}
+            height={150}
+            className="h-auto w-auto"
+          />
+        </div>
+        <div className="flex items-center justify-center p-4 transition-transform hover:scale-105">
+          <Image
+            src="/images/badges/shopify-headless.webp"
+            alt="Headless at Shopify for Developers"
+            width={150}
+            height={150}
+            className="h-auto w-auto"
+          />
+        </div>
+        <div className="flex items-center justify-center p-4 transition-transform hover:scale-105">
+          <Image
+            src="/images/badges/shopify_dev_fundamentals.webp"
+            alt="Shopify Development Fundamentals"
+            width={150}
+            height={150}
+            className="h-auto w-auto"
+          />
         </div>
       </div>
     </>

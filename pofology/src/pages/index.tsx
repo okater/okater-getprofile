@@ -16,7 +16,7 @@ import type { GetServerSideProps, NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <AppLayout title="Home">
+    <AppLayout title="Oleksandr Katerynchuk - Salesforce Commerce Cloud Tech Lead">
       <HeroSection />
       <section className="container pt-20 pb-10">
         <AboutSection />
