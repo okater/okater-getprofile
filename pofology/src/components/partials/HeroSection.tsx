@@ -8,7 +8,7 @@ import { useTyped } from '@/hooks/useTyped';
 
 const HeroSection = () => {
   const typedRef = useTyped({
-    strings: ['Architect', 'Tech Lead', 'Developer'],
+    strings: ['Architect', 'Technical Lead', 'Developer'],
     typeSpeed: 60,
     backSpeed: 30,
     loop: true,
@@ -18,13 +18,12 @@ const HeroSection = () => {
     <div className="hero relative -mt-16 flex items-center justify-center">
       <HeroBackground />
       <div className="flex flex-col items-center">
-        <div className="overflow-hidden rounded-full">
-          <Image src="/images/avatar/man.webp" width={180} height={180} alt="avatar" />
+        <div className="flex h-[188px] w-[188px] items-center justify-center overflow-hidden rounded-full border-4 border-primary-500">
+          <Image src="/images/avatar/man.webp" width={180} height={180} alt="avatar" className="block" />
         </div>
         <h1 className="mt-4 text-3xl font-bold ">Oleksandr Katerynchuk</h1>
         <div className="mt-2 flex gap-1">
-          {' '}
-          I'm a Salesforce Commerce Cloud{' '}
+          I'm a Salesforce Commerce Cloud
           <span ref={typedRef}></span>
         </div>
         <div className="mt-4  flex gap-5">

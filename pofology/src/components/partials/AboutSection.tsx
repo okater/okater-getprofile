@@ -15,7 +15,7 @@ const AboutSection = () => {
         {/* Bio */}
         <div className="">
           <p className="indent-3 leading-8">
-            Hi there! My name is Oleksandr Katerynchuk. I am a Salesforce B2C Commerce (SFCC) TechLead with extensive experience in e-commerce development.
+            Hi there! My name is Oleksandr Katerynchuk. I am a Salesforce B2C Commerce (SFCC) Technical Lead with extensive experience in e-commerce development.
           </p>
           <p className="indent-3 leading-8">
             I specialize in building scalable and efficient Salesforce Commerce Cloud <span className="nowrap">e-commerce</span> solutions using SFCC.
