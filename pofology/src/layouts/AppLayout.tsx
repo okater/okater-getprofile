@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Head from 'next/head';
 import Menu from '@/components/partials/Menu';
 import Footer from '@/components/partials/Footer';

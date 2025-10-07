@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+﻿import React, { useEffect, useLayoutEffect } from 'react';
 
 export enum Theme {
   LIGHT = 'light',

@@ -4,7 +4,7 @@ import { FiCoffee } from 'react-icons/fi';
 import { HiOutlineChartBar, HiOutlineFire, HiOutlineUsers } from 'react-icons/hi';
 import ProgressBar from '@/components/shared/ProgressBar';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const AboutSection = () => {
   return (

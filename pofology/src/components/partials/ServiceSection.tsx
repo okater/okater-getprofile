@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import React from 'react';
 import SectionTitle from '@/components/shared/SectionTitle';
 import { services } from '@/data/services';
@@ -40,7 +40,7 @@ const ServiceSection = () => {
       <p className="mt-8 text-center">
         Looking for a custom service?{' '}
         <Link href="/contact">
-          <a>Click here to contact me! &#128079;</a>
+          Click here to contact me! &#128079;
         </Link>
       </p>
     </>

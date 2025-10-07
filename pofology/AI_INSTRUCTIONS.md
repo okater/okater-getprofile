@@ -4,9 +4,9 @@
 Pofology is a personal portfolio website built with Next.js, TypeScript, and Tailwind CSS. The project follows modern web development practices and uses a component-based architecture.
 
 ## Tech Stack
-- **Framework**: Next.js 12.3.1
-- **Language**: TypeScript 4.8.4
-- **Styling**: Tailwind CSS 3.1.8
+- **Framework**: Next.js 15.0.0+
+- **Language**: TypeScript 5.2.2+
+- **Styling**: Tailwind CSS 3.3.5+
 - **State Management**: React Hooks (no external state management library)
 - **Package Manager**: npm/yarn
 
@@ -60,7 +60,7 @@ Key dependencies and their purposes:
 - **@headlessui/react**: UI components
 - **react-icons**: Icon library
 - **react-slick**: Carousel/slider functionality
-- **react-typed**: Typing animation effects
+- **typed.js**: Typing animation effects
 - **classnames**: Dynamic class name handling
 - **axios**: HTTP client for API calls
 
@@ -113,6 +113,9 @@ Key dependencies and their purposes:
 3. Import necessary components
 4. Implement SEO meta tags if needed
 
+### Running node commands
+1. Ensure commands are running from directory `pofology`
+
 ## Troubleshooting
 
 ### Common Issues
@@ -140,8 +143,7 @@ Key dependencies and their purposes:
 7. Follow established project patterns
 
 ## Future Considerations
-1. Consider upgrading to Next.js 13+ for app directory features
-2. Implement more interactive features
-3. Add more animation effects
-4. Enhance accessibility features
-5. Implement more SEO optimizations
+1. Implement more interactive features
+2. Add more animation effects
+3. Enhance accessibility features
+4. Implement more SEO optimizations
