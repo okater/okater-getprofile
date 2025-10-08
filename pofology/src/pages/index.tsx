@@ -1,7 +1,9 @@
 ﻿import AboutSection from '@/components/partials/AboutSection';
 import BlogSection from '@/components/partials/BlogSection';
+import BadgesSection from '@/components/partials/BadgesSection';
 import ContactSection from '@/components/partials/ContactSection';
 import ExperienceSection from '@/components/partials/ExperienceSection';
+import EducationSection from '@/components/partials/EducationSection';
 import HeroSection from '@/components/partials/HeroSection';
 import RecentWorkSection from '@/components/partials/RecentWorkSection';
 import ServiceSection from '@/components/partials/ServiceSection';
@@ -22,7 +24,13 @@ const Home: NextPage = () => {
         <AboutSection />
       </section>
       <section className="container py-16">
+        <BadgesSection />
+      </section>
+      <section className="container py-16">
         <ExperienceSection />
+      </section>
+      <section className="container py-16">
+        <EducationSection />
       </section>
       <section className="container py-16">
         <ServiceSection />

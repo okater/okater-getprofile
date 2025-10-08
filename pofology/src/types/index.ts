@@ -5,7 +5,7 @@ export type Experience = {
   company: string;
   startDate: string;
   endDate: string;
-  description: string;
+  responsibilities: Array<string>;
 };
 
 export type Education = {
@@ -13,7 +13,7 @@ export type Education = {
   degree: string;
   startDate: string;
   endDate: string;
-  description: string;
+  descriptions: Array<string>;
 };
 
 export type Service = {
