@@ -46,7 +46,7 @@ const BrandsSection = ({ showTitle = true }: { showTitle?: boolean }) => {
   ];
 
   return (
-    <>
+    <section itemScope itemType="https://schema.org/Person" className="brands-section">
       {showTitle && <SectionTitle>Notable Clients</SectionTitle>}
       
       {/* Mobile Carousel - Two rows */}
@@ -82,7 +82,7 @@ const BrandsSection = ({ showTitle = true }: { showTitle?: boolean }) => {
           </div>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

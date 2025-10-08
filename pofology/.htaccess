@@ -28,6 +28,15 @@ ErrorDocument 404 /404.html
 # Prevent directory browsing
 Options -Indexes
 
+# SEO-friendly XML files
+<Files "sitemap.xml">
+    Header set Content-Type "application/xml"
+</Files>
+
+<Files "robots.txt">
+    Header set Content-Type "text/plain"
+</Files>
+
 # Cache static assets
 <IfModule mod_expires.c>
     ExpiresActive on

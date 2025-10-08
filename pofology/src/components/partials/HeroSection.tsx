@@ -15,17 +15,24 @@ const HeroSection = () => {
   });
 
   return (
-    <div className="hero relative -mt-16 flex items-center justify-center">
+    <header className="hero relative -mt-16 flex items-center justify-center" role="banner">
       <HeroBackground />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center text-center">
         <div className="flex h-[188px] w-[188px] items-center justify-center overflow-hidden rounded-full border-8 border-primary-500">
-          <Image src="/images/avatar/man.webp" width={180} height={180} alt="avatar" className="block" />
+          <Image 
+            src="/images/avatar/man.webp" 
+            width={180} 
+            height={180} 
+            alt="Oleksandr Katerynchuk - Salesforce Commerce Cloud Tech Lead"
+            className="block"
+            priority
+          />
         </div>
-        <h1 className="mt-4 text-3xl font-bold ">Oleksandr Katerynchuk</h1>
-        <div className="mt-2 flex gap-1">
+        <h1 className="mt-4 text-3xl font-bold">Oleksandr Katerynchuk</h1>
+        <h2 className="mt-2 flex gap-1 text-xl">
           I'm a Salesforce Commerce Cloud
-          <span ref={typedRef}></span>
-        </div>
+          <span ref={typedRef} className="text-primary-500 font-semibold"></span>
+        </h2>
         <div className="mt-4  flex gap-5">
           <Link
             href="https://www.linkedin.com/in/okater/"
@@ -53,7 +60,7 @@ const HeroSection = () => {
           <div className="animate-scroll absolute h-1 w-1 bg-gray-600 dark:bg-gray-100" style={{ top: '6px' }}></div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
