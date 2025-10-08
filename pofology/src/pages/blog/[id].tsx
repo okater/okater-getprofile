@@ -27,7 +27,7 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
         </div>
         <div>
           <div className="mt-10 overflow-hidden rounded-xl">
-            <Image src={post.imageUrl} height={720} width={1280} layout="responsive" alt={post.title} />
+            <Image src={post.imageUrl} height={720} width={1280} className="w-full h-auto" alt={post.title} />
           </div>
           <article
             className="prose mt-10 max-w-full dark:prose-invert"
@@ -35,24 +35,16 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
           ></article>
           <div className="mt-10  flex">
             <Link href="#">
-              <a>
-                <FiTwitter className="mr-3" />
-              </a>
+              <FiTwitter className="mr-3" />
             </Link>
             <Link href="#">
-              <a>
-                <FiFacebook className="mx-3" />
-              </a>
+              <FiFacebook className="mx-3" />
             </Link>
             <Link href="#">
-              <a>
-                <FiLinkedin className="mx-3" />
-              </a>
+              <FiLinkedin className="mx-3" />
             </Link>
             <Link href="#">
-              <a>
-                <FiMail className="mx-3" />
-              </a>
+              <FiMail className="mx-3" />
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8">

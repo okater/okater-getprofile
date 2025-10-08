@@ -1,11 +1,11 @@
-import { Url } from 'url';
+﻿import { Url } from 'url';
 
 export type Experience = {
   jobTitle: string;
   company: string;
   startDate: string;
   endDate: string;
-  description: string;
+  responsibilities: Array<string>;
 };
 
 export type Education = {
@@ -13,7 +13,7 @@ export type Education = {
   degree: string;
   startDate: string;
   endDate: string;
-  description: string;
+  descriptions: Array<string>;
 };
 
 export type Service = {
@@ -56,4 +56,6 @@ export type Review = {
     company: string;
   };
   comment: string;
+  urlLink: string;
+  urlTitle: string;
 };

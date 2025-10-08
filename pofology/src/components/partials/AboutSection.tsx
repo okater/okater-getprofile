@@ -9,18 +9,25 @@ const AboutSection = () => {
     <>
       <SectionTitle>About Me</SectionTitle>
 
-      <div className="grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:gap-8">
+      <div className="">
         {/* Bio */}
         <div className="">
-          <p className="text-justify">
-            Hi, I am Md Mostafizur Rahman, I am a fullstack developer. I work from Dhaka, Bangladesh. I have rich
-            experience in building, designing & customizing website, web apps, mobile apps etc.
+          <p className="indent-3 leading-8">
+            Hi there! 👋 My name is Oleksandr Katerynchuk. I'm based in Chicago, IL 🏠
           </p>
-          <Button className="mt-5">Download CV</Button>
+          <p className="indent-3 leading-8">I am a Salesforce B2C Commerce (SFCC) Technical Lead with extensive experience in e-commerce development.
+          </p>
+          <p className="indent-3 leading-8">
+            I specialize in building scalable and efficient Salesforce Commerce Cloud solutions.
+          </p>
+          <p className="indent-3 leading-8">
+            I have experience with PWA Kit, SFRA and SiteGenesis architectures and worked on numerous projects for very well-known brands. I did different kind of integrations with third-party systems, and performance optimization.
+          </p>
+          {/* <Button className="mt-5">Download CV</Button> */}
         </div>
 
         {/* Skills */}
-        <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+        {/* <div className="grid grid-cols-2 gap-x-6 gap-y-4">
           <div className="">
             <div className="mb-3 flex justify-between">
               <h6 className="font-semibold">Backend</h6>
@@ -50,49 +57,7 @@ const AboutSection = () => {
             </div>
             <ProgressBar color="green" progress={80} />
           </div>
-        </div>
-      </div>
-
-      {/* Overview */}
-      <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <HiOutlineFire size={50} />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">20+</h2>
-            <p className="mt-1">Projects Completed</p>
-          </div>
-        </div>
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <FiCoffee size={50} />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">30+</h2>
-            <p className="mt-1">Cup of Coffee</p>
-          </div>
-        </div>
-
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <HiOutlineUsers size={50} />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">15+</h2>
-            <p className="mt-1">Satisfied clients</p>
-          </div>
-        </div>
-
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <HiOutlineChartBar size={50} />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">5+</h2>
-            <p className="mt-1">Years of experience</p>
-          </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

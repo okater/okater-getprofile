@@ -1,4 +1,5 @@
-import { ThemeProvider } from '@/hooks/use-theme';
+﻿import { ThemeProvider } from '@/hooks/use-theme';
+import '@/styles/tailwind.css';
 import '@/styles/app.scss';
 import type { AppProps } from 'next/app';
 
