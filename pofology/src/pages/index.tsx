@@ -23,14 +23,30 @@ const Home: NextPage = () => {
       <section className="container pt-20 pb-10">
         <AboutSection />
       </section>
-      <section className="container py-16">
+      
+      {/* Mobile Layout - Badges shown separately */}
+      <section className="container py-16 md:hidden">
         <BadgesSection />
       </section>
+
+      {/* Desktop Layout - Experience/Education in left column, Badges in right column */}
       <section className="container py-16">
-        <ExperienceSection />
-      </section>
-      <section className="container py-16">
-        <EducationSection />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Left Column - Experience and Education */}
+          <div className="md:col-span-2 space-y-16">
+            <div>
+              <ExperienceSection />
+            </div>
+            <div>
+              <EducationSection />
+            </div>
+          </div>
+          
+          {/* Right Column - Badges (Desktop only) */}
+          <div className="hidden md:block">
+            <BadgesSection showTitle={true} />
+          </div>
+        </div>
       </section>
       <section className="container py-16">
         <ServiceSection />

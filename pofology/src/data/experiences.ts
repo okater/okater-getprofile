@@ -16,11 +16,12 @@ export const experiences: Experience[] = [
 
   {
     jobTitle: 'Salesforce Commerce Cloud Tech Lead',
-    company: 'Speroteck (staffed to Capgemini / Fenom Digital)',
+    company: 'Speroteck (staffed to Capgemini & Fenom Digital)',
     startDate: 'Oct 2021',
     endDate: 'Sep 2022',
     responsibilities: [
       'Supported hybrid SFRA + headless build',
+      'Migrated from SiteGenesis Pipelines to SFRA',
       'Added new EMEA/APAC sites',
       'Implemented multi-currency pricebooks, tax/shipping rules, and inventory integrations',
       'Launched three additional locales'
