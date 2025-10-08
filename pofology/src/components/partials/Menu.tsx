@@ -20,7 +20,7 @@ const Menu = () => {
             <span className="text-primary-500">.</span>
           </a>
         </Link> */}
-        <ul className="ml-auto hidden items-center md:flex">
+        {/* <ul className="ml-auto hidden items-center md:flex">
           <li>
             <Link 
               href="/works"
@@ -60,7 +60,7 @@ const Menu = () => {
               Contact
             </Link>
           </li>
-        </ul>
+        </ul> */}
         <button
           type="button"
           className="ml-auto transition-colors duration-150 hover:text-primary-500 md:-mt-0.5 md:ml-3"
@@ -73,7 +73,7 @@ const Menu = () => {
           onClick={() => setSidebarOpen(!sidebarOpen)}
           className="ml-5 flex text-gray-700 dark:text-gray-200 md:hidden"
         >
-          <HiMenuAlt3 size={24} />
+          {/* <HiMenuAlt3 size={24} /> */}
         </button>
       </div>
       {/* Mobile menu */}

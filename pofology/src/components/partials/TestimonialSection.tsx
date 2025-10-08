@@ -10,14 +10,23 @@ const Testimonial = () => {
   const reviewSettings: Settings = {
     dots: true,
     infinite: true,
-    speed: 4000,
+    autoplaySpeed: 4000,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: autoplay,
-    arrows: false,
+    arrows: true,
     pauseOnHover: true,
     pauseOnDotsHover: true,
     onSwipe: () => setAutoplay(false),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
   };
   return (
     <>

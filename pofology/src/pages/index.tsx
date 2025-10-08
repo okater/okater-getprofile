@@ -2,6 +2,7 @@
 import BlogSection from '@/components/partials/BlogSection';
 import BadgesSection from '@/components/partials/BadgesSection';
 import BrandsSection from '@/components/partials/BrandsSection';
+import CertificationsSection from '@/components/partials/CertificationsSection';
 import ContactSection from '@/components/partials/ContactSection';
 import ExperienceSection from '@/components/partials/ExperienceSection';
 import EducationSection from '@/components/partials/EducationSection';
@@ -62,11 +63,14 @@ const Home: NextPage = () => {
         <TestimonialSection />
       </section>
       <section className="container py-8">
+        <CertificationsSection />
+      </section>
+      {/* <section className="container py-8">
         <BlogSection />
       </section>
       <section className="container py-8">
         <ContactSection />
-      </section>
+      </section> */}
     </AppLayout>
   );
 };

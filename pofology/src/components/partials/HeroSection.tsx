@@ -38,7 +38,9 @@ const HeroSection = () => {
             <FiGithub size={25} />
           </Link>
         </div>
-        <Button className="mt-5 px-8">Hire Me</Button>
+        <Link href="https://www.linkedin.com/in/okater/" target="_blank" rel="noopener noreferrer">
+          <Button className="mt-5 px-8">Hire Me</Button>
+        </Link>
       </div>
       <div className="absolute bottom-0 flex flex-col items-center ">
         <p className="mb-3 text-sm">Scroll Down</p>
