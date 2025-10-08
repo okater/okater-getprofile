@@ -1,7 +1,0 @@
-<!-- This is a placeholder. You should create an actual 1200x630px image -->
-<!-- The image should include: -->
-<!-- - Your photo -->
-<!-- - "Oleksandr Katerynchuk" text -->
-<!-- - "Salesforce Commerce Cloud Tech Lead" text -->
-<!-- - Professional background/branding -->
-<!-- Save as: /public/images/og-image.jpg -->
