@@ -1,14 +1,14 @@
-import Image from "next/image";
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FiLinkedin, FiGithub, FiCloud } from 'react-icons/fi';
 import Button from '@/components/form/Button';
 import HeroBackground from './HeroBackground';
 import { useTyped } from '@/hooks/useTyped';
 
 const HeroSection = () => {
   const typedRef = useTyped({
-    strings: ['Architect', 'Technical Lead', 'Developer'],
+    strings: ['Architect', 'TechLead', 'Developer'],
     typeSpeed: 60,
     backSpeed: 30,
     loop: true,
@@ -18,7 +18,7 @@ const HeroSection = () => {
     <div className="hero relative -mt-16 flex items-center justify-center">
       <HeroBackground />
       <div className="flex flex-col items-center">
-        <div className="flex h-[188px] w-[188px] items-center justify-center overflow-hidden rounded-full border-4 border-primary-500">
+        <div className="flex h-[188px] w-[188px] items-center justify-center overflow-hidden rounded-full border-8 border-primary-500">
           <Image src="/images/avatar/man.webp" width={180} height={180} alt="avatar" className="block" />
         </div>
         <h1 className="mt-4 text-3xl font-bold ">Oleksandr Katerynchuk</h1>
@@ -31,6 +31,11 @@ const HeroSection = () => {
             href="https://www.linkedin.com/in/okater/"
             className="text-gray-700 transition-colors duration-150 hover:text-primary-500">
             <FiLinkedin size={25} />
+          </Link>
+          <Link
+            href="https://www.salesforce.com/trailblazer/okater/"
+            className="text-gray-700 transition-colors duration-150 hover:text-primary-500">
+            <FiCloud size={25} />
           </Link>
           <Link
             href="https://www.github.com/okater/"

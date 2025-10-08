@@ -13,13 +13,15 @@ const AboutSection = () => {
         {/* Bio */}
         <div className="">
           <p className="indent-3 leading-8">
-            Hi there! My name is Oleksandr Katerynchuk. I am a Salesforce B2C Commerce (SFCC) Technical Lead with extensive experience in e-commerce development.
+            Hi there! 👋 My name is Oleksandr Katerynchuk. I'm based in Chicago, IL 🏠
+          </p>
+          <p className="indent-3 leading-8">I am a Salesforce B2C Commerce (SFCC) Technical Lead with extensive experience in e-commerce development.
           </p>
           <p className="indent-3 leading-8">
-            I specialize in building scalable and efficient Salesforce Commerce Cloud <span className="nowrap">e-commerce</span> solutions using SFCC.
+            I specialize in building scalable and efficient Salesforce Commerce Cloud solutions.
           </p>
           <p className="indent-3 leading-8">
-            I have experience with PWA Kit, SFRA and SiteGenesis architectures. I worked on numerous projects for a very well-known brands. I did different kind of integrations with third-party systems, and performance optimization.
+            I have experience with PWA Kit, SFRA and SiteGenesis architectures and worked on numerous projects for very well-known brands. I did different kind of integrations with third-party systems, and performance optimization.
           </p>
           {/* <Button className="mt-5">Download CV</Button> */}
         </div>
