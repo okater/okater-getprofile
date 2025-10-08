@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from 'react';
 import Button from '@/components/form/Button';
 import Input from '@/components/form/Input';
@@ -11,7 +11,7 @@ const ContactSection = () => {
       <SectionTitle>Get In Touch</SectionTitle>
       <div className="mt-14 grid gap-6 md:grid-cols-3">
         <div className="relative h-48">
-          <Image src="/images/map.svg" layout="fill" className="dark:invert" alt="map" />
+          <Image src="/images/map.svg" fill className="dark:invert object-cover" alt="map" />
           <h6 className="text-2xl font-bold">Let's talk about everything!</h6>
           <p className="mt-2">Don't like forms? Send me an email. 👋</p>
         </div>

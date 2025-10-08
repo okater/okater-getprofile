@@ -2,7 +2,7 @@ import { works } from '@/data/works';
 import AppLayout from '@/layouts/AppLayout';
 import { Work } from '@/types';
 import { GetServerSideProps } from 'next';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import Slider, { Settings } from 'react-slick';
 
@@ -40,7 +40,7 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
           <Slider {...settings}>
             {work.images.map((image, index) => (
               <div className="overflow-hidden rounded-xl" key={index}>
-                <Image src={image} height={720} width={1280} layout="responsive" alt={work.title} />
+                <Image src={image} height={720} width={1280} className="w-full h-auto" alt={work.title} />
               </div>
             ))}
           </Slider>

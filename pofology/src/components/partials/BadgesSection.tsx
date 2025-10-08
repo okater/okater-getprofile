@@ -1,5 +1,5 @@
 import SectionTitle from '@/components/shared/SectionTitle';
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const BadgesSection = ({ showTitle = true }: { showTitle?: boolean }) => {
   const badges = [

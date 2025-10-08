@@ -1,6 +1,6 @@
 import AppLayout from '@/layouts/AppLayout';
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi';
 import CommentBox from '@/components/partials/CommentBox';
@@ -27,7 +27,7 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
         </div>
         <div>
           <div className="mt-10 overflow-hidden rounded-xl">
-            <Image src={post.imageUrl} height={720} width={1280} layout="responsive" alt={post.title} />
+            <Image src={post.imageUrl} height={720} width={1280} className="w-full h-auto" alt={post.title} />
           </div>
           <article
             className="prose mt-10 max-w-full dark:prose-invert"

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from 'react';
 import styles from '@/styles/modules/Post.module.scss';
 import Link from 'next/link';
@@ -15,7 +15,7 @@ const Post = ({ thumbnailUrl, title, publishedAt, href }: Props) => {
   return (
     <div className={classNames(styles['post'], 'bg-white dark:bg-gray-700')}>
       <Link href={href} className={styles['post-image']}>
-        <Image src={thumbnailUrl} height={384} width={512} layout="responsive" alt={title} />
+        <Image src={thumbnailUrl} height={384} width={512} className="w-full h-auto" alt={title} />
       </Link>
       <div className="p-6">
         <Link

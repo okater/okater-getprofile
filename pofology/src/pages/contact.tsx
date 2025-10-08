@@ -1,7 +1,7 @@
 ﻿import PageTitle from '@/components/shared/PageTitle';
 import AppLayout from '@/layouts/AppLayout';
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Button from '@/components/form/Button';
 import Input from '@/components/form/Input';
 import TextArea from '@/components/form/Textarea';
@@ -22,7 +22,7 @@ const Contact = (props: Props) => {
       <div className="container py-10">
         <div className="grid gap-6 md:grid-cols-3">
           <div className="relative mb-10 h-48">
-            <Image src="/images/map.svg" layout="fill" className="dark:invert" alt="map" />
+            <Image src="/images/map.svg" fill className="dark:invert object-cover" alt="map" />
             <h6 className="text-2xl font-bold">Contact with me</h6>
             <p className="mt-2">I would love to hear from you. 👋</p>
             <div className="mt-10 text-gray-400">
