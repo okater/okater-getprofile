@@ -56,4 +56,6 @@ export type Review = {
     company: string;
   };
   comment: string;
+  urlLink: string;
+  urlTitle: string;
 };
