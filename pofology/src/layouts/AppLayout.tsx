@@ -179,7 +179,7 @@ const AppLayout: React.FC<Props> = ({
           }
         />
         <Menu />
-        <main id="main-content" className="mt-16">{children}</main>
+        <main id="main-content" className="mt-16" role="main">{children}</main>
         <Footer />
       </div>
     </>

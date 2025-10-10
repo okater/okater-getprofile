@@ -30,6 +30,15 @@
   white-space: normal;
 }
 
+/* Improved contrast ratios */
+.text-gray-400 {
+  color: #6b7280 !important; /* Better contrast than default */
+}
+
+.text-gray-500 {
+  color: #4b5563 !important; /* Better contrast than default */
+}
+
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .text-gray-700 {
@@ -40,12 +49,29 @@
     color: #1f2937 !important;
   }
   
+  .text-gray-400 {
+    color: #374151 !important;
+  }
+  
+  .text-gray-500 {
+    color: #1f2937 !important;
+  }
+  
   .border-gray-600 {
     border-color: #000000 !important;
   }
   
   .bg-primary-500 {
     background-color: #0c4a6e !important;
+  }
+  
+  /* Ensure sufficient contrast for links */
+  a {
+    color: #1e40af !important;
+  }
+  
+  a:hover {
+    color: #1e3a8a !important;
   }
 }
 
@@ -66,12 +92,54 @@
   }
 }
 
-/* Improve touch targets */
+/* Improve touch targets - WCAG AA minimum 44x44px */
+button,
+a,
+.slick-dots li button,
+.slick-arrow {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure adequate spacing between touch targets */
+.slick-dots li {
+  margin: 0 8px;
+}
+
+/* Improve slider arrow touch targets */
+.slick-prev,
+.slick-next {
+  width: 44px;
+  height: 44px;
+  z-index: 2;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 24px;
+}
+
+/* Social media links spacing */
+nav[aria-label="Social media links"] .flex {
+  gap: 12px; /* Increased gap for better touch target spacing */
+}
+
+/* Special handling for mobile devices */
 @media (hover: none) and (pointer: coarse) {
   button,
   a {
-    min-height: 44px;
-    min-width: 44px;
+    min-height: 48px; /* Even larger for mobile */
+    min-width: 48px;
+    padding: 12px;
+  }
+  
+  /* Carousel controls for mobile */
+  .slick-dots li button {
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -100,4 +168,66 @@ input:valid {
 
 .loading * {
   pointer-events: none;
+}
+
+/* Screen reader improvements */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Skip to main content improvements */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Improve focus indicators for different elements */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #0284c7;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.2);
+}
+
+/* Improve carousel accessibility */
+.slick-slider [role="listbox"] {
+  outline: none;
+}
+
+.slick-slide:focus {
+  outline: 2px solid #0284c7;
+  outline-offset: 2px;
+}
+
+/* Improve dark mode contrast */
+@media (prefers-color-scheme: dark) {
+  .dark .text-gray-400 {
+    color: #9ca3af !important; /* Better contrast in dark mode */
+  }
+  
+  .dark .text-gray-500 {
+    color: #6b7280 !important; /* Better contrast in dark mode */
+  }
 }

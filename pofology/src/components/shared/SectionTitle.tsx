@@ -7,7 +7,7 @@ interface SectionTitleProps {
   className?: string;
 }
 
-const SectionTitle: React.FC<SectionTitleProps> = ({ children, level = 3, className = '' }) => {
+const SectionTitle: React.FC<SectionTitleProps> = ({ children, level = 2, className = '' }) => {
   const Tag = `h${level}` as keyof JSX.IntrinsicElements;
   
   return (

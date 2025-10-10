@@ -70,9 +70,9 @@ const HeroSection = () => {
         </Link>
       </div>
       <div className="absolute bottom-0 flex flex-col items-center" role="presentation" aria-hidden="true">
-        <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">Scroll Down</p>
-        <div className="relative flex h-7 w-5 justify-center rounded-full border-2 border-gray-700 dark:border-gray-300">
-          <div className="animate-scroll absolute h-1 w-1 bg-gray-700 dark:bg-gray-300" style={{ top: '6px' }}></div>
+        <p className="mb-3 text-sm text-gray-800 dark:text-gray-200">Scroll Down</p>
+        <div className="relative flex h-7 w-5 justify-center rounded-full border-2 border-gray-800 dark:border-gray-200">
+          <div className="animate-scroll absolute h-1 w-1 bg-gray-800 dark:bg-gray-200" style={{ top: '6px' }}></div>
         </div>
       </div>
     </header>
