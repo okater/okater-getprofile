@@ -56,6 +56,9 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className="container py-8">
+        <TestimonialSection />
+      </section>
+      <section className="container py-8">
         <BrandsSection />
       </section>
       {/* <section className="container py-8">
@@ -65,17 +68,15 @@ const Home: NextPage = () => {
         <RecentWorkSection />
       </section> */}
       <section className="container py-8">
-        <TestimonialSection />
-      </section>
-      <section className="container py-8">
         <CertificationsSection />
       </section>
       {/* <section className="container py-8">
         <BlogSection />
-      </section> */}
+      </section>
       <section className="container py-8">
         <ContactSection />
       </section>
+       */}
     </AppLayout>
   );
 };

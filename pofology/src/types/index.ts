@@ -59,3 +59,18 @@ export type Review = {
   urlLink: string;
   urlTitle: string;
 };
+
+export type Brand = {
+  src: string;
+  alt: string;
+};
+
+export type Badge = {
+  src: string;
+  alt: string;
+};
+
+export type Certification = {
+  src: string;
+  alt: string;
+};

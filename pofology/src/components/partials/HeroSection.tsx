@@ -29,7 +29,7 @@ const HeroSection = () => {
           />
         </div>
         <h1 className="mt-4 text-3xl font-bold">Oleksandr Katerynchuk</h1>
-        <h2 className="mt-2 flex gap-1 text-xl">
+        <h2 className="mt-2 flex gap-1">
           I'm a Salesforce Commerce Cloud
           <span ref={typedRef} className="text-primary-500 font-semibold"></span>
         </h2>

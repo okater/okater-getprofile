@@ -1,49 +1,24 @@
 import SectionTitle from '@/components/shared/SectionTitle';
 import Image from 'next/image';
+import React, { useState } from 'react';
+import Slider, { Settings } from 'react-slick';
+import { badges } from '@/data/badges';
 
 const BadgesSection = ({ showTitle = true }: { showTitle?: boolean }) => {
-  const badges = [
-    {
-      src: '/images/badges/sf_b2c_architect.webp',
-      alt: 'Certified B2C Commerce Architect'
-    },
-    {
-      src: '/images/badges/sf_b2c_developer.webp',
-      alt: 'Certified B2C Commerce Developer'
-    },
-    {
-      src: '/images/badges/agentforce_legend.webp',
-      alt: 'Agentforce Legend 2025'
-    },
-    {
-      src: '/images/badges/sf_agentforce.webp',
-      alt: 'Certified Agentforce Specialist'
-    },
-    {
-      src: '/images/badges/sf_js_developer.webp',
-      alt: 'Certified JavaScript Developer'
-    },
-    {
-      src: '/images/badges/sf_einstein_accredited.webp',
-      alt: 'Accredited Commerce Cloud Einstein'
-    },
-    {
-      src: '/images/badges/sf_platform_foundations.webp',
-      alt: 'Salesforce Platform Foundations'
-    },
-    {
-      src: '/images/badges/sf_ai_associate.webp',
-      alt: 'Certified AI Associate'
-    },
-    {
-      src: '/images/badges/shopify-headless.webp',
-      alt: 'Headless at Shopify for Developers'
-    },
-    {
-      src: '/images/badges/shopify_dev_fundamentals.webp',
-      alt: 'Shopify Development Fundamentals'
-    }
-  ];
+  const [autoplay, setAutoplay] = useState(true);
+
+  const badgesSettings: Settings = {
+    dots: false,
+    infinite: true,
+    autoplaySpeed: 1200,
+    speed: 1200,
+    slidesToShow: 2,
+    slidesToScroll: autoplay ? 1 : 2,
+    autoplay: autoplay,
+    arrows: false,
+    pauseOnHover: true,
+    onSwipe: () => setAutoplay(false)
+  };
 
   return (
     <>
@@ -51,10 +26,10 @@ const BadgesSection = ({ showTitle = true }: { showTitle?: boolean }) => {
       
       {/* Mobile Carousel */}
       <div className="mt-10 md:hidden">
-        <div className="overflow-x-auto">
-          <div className="flex gap-4 pb-4" style={{ width: `${badges.length * 160}px` }}>
-            {badges.map((badge, index) => (
-              <div key={index} className="flex-shrink-0 flex items-center justify-center p-4 transition-transform hover:scale-105" style={{ width: '150px' }}>
+        <Slider {...badgesSettings}>
+          {badges.map((badge, index) => (
+            <div key={index} className="px-2">
+              <div className="flex items-center justify-center p-4 transition-transform hover:scale-105">
                 <Image
                   src={badge.src}
                   alt={badge.alt}
@@ -63,9 +38,9 @@ const BadgesSection = ({ showTitle = true }: { showTitle?: boolean }) => {
                   className="h-auto w-auto"
                 />
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </div>
 
       {/* Desktop Grid */}
