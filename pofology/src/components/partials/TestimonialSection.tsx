@@ -1,11 +1,15 @@
 import { reviews } from '@/data/reviews';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 import Slider, { Settings } from 'react-slick';
 import SectionTitle from '../shared/SectionTitle';
 
-const Testimonial = () => {
+const Testimonial = memo(() => {
   const [autoplay, setAutoplay] = useState(true);
+
+  const handleAutoplayStop = useCallback(() => {
+    setAutoplay(false);
+  }, []);
 
   const reviewSettings: Settings = {
     dots: true,
@@ -18,7 +22,8 @@ const Testimonial = () => {
     arrows: true,
     pauseOnHover: true,
     pauseOnDotsHover: true,
-    onSwipe: () => setAutoplay(false),
+    onSwipe: handleAutoplayStop,
+    lazyLoad: 'ondemand',
     responsive: [
       {
         breakpoint: 768,
@@ -33,13 +38,21 @@ const Testimonial = () => {
     <>
       <SectionTitle>Reviews</SectionTitle>
       <div className="mt-16">
-        <div onMouseDown={() => setAutoplay(false)}>
+        <div onMouseDown={handleAutoplayStop}>
           <Slider {...reviewSettings}>
             {reviews.map((review, index) => (
               <div className="mb-6 px-4" key={index}>
                 <div className="flex flex-col items-center">
                   <div className="h-24 w-24 rounded-full">
-                    <Image src={review.author.imageUrl} height={100} width={100} alt={review.author.name} className="object-cover rounded-full" />
+                    <Image 
+                      src={review.author.imageUrl} 
+                      height={100} 
+                      width={100} 
+                      alt={`${review.author.name} profile photo`}
+                      className="object-cover rounded-full"
+                      loading="lazy"
+                      quality={75}
+                    />
                   </div>
                   <h6 className="mt-3 text-lg font-semibold">{review.author.name}</h6>
                   <p className="text-sm text-gray-400 dark:text-gray-200">
@@ -71,6 +84,8 @@ const Testimonial = () => {
       </div>
     </>
   );
-};
+});
+
+Testimonial.displayName = 'TestimonialSection';
 
 export default Testimonial;

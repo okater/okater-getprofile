@@ -1,0 +1,37 @@
+# Performance and Security Headers
+# This file should be placed in the root of your static hosting
+
+# Cache headers for static assets
+Cache-Control: public, max-age=31536000, immutable
+  *.woff2
+  *.woff
+  *.ttf
+  *.eot
+  *.svg
+  *.jpg
+  *.jpeg
+  *.png
+  *.webp
+  *.avif
+  *.gif
+  *.ico
+  *.css
+  *.js
+
+# Cache headers for HTML files
+Cache-Control: public, max-age=3600
+  *.html
+
+# Security headers
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Performance headers
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+
+# Content Security Policy
+Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';

@@ -1,0 +1,113 @@
+/* Performance optimizations for images and media */
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lazy loading optimization */
+img[loading="lazy"] {
+  content-visibility: auto;
+}
+
+/* Reduce layout shift */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optimize carousel performance */
+.slick-slider {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.slick-slide {
+  transform: translateZ(0);
+}
+
+/* Reduce paint times */
+.hover-transform {
+  will-change: transform;
+}
+
+.hover-transform:not(:hover) {
+  will-change: auto;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-slide {
+    animation: slide 0.3s ease-out;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Critical resource hints */
+.preload-link {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Optimize font rendering */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce unused CSS */
+.hidden-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hidden-mobile {
+    display: block;
+  }
+  
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* GPU acceleration for smooth scrolling */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  overflow-anchor: none;
+}
+
+/* Optimize carousel dots */
+.slick-dots {
+  transform: translateZ(0);
+}
+
+.slick-dots li button {
+  transform: translateZ(0);
+}
+
+/* Content visibility optimization */
+.off-screen {
+  content-visibility: auto;
+  contain-intrinsic-size: 300px;
+}
+
+/* Intersection observer optimization */
+.lazy-section {
+  min-height: 100px;
+  content-visibility: auto;
+}

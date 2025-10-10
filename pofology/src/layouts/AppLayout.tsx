@@ -133,13 +133,33 @@ const AppLayout: React.FC<Props> = ({
           }}
         />
         
-        {/* Preconnect to external domains */}
+        {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Preload critical fonts */}
+        <link 
+          rel="preload" 
+          href="/fonts/rubik-v14-latin-500.woff2" 
+          as="font" 
+          type="font/woff2" 
+          crossOrigin="anonymous"
+        />
+        <link 
+          rel="preload" 
+          href="/fonts/rubik-v14-latin-600.woff2" 
+          as="font" 
+          type="font/woff2" 
+          crossOrigin="anonymous"
+        />
         
         {/* DNS Prefetch for performance */}
         <link rel="dns-prefetch" href="//www.linkedin.com" />
         <link rel="dns-prefetch" href="//github.com" />
+        
+        {/* Performance hints */}
+        <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />
+        <meta name="format-detection" content="telephone=no" />
       </Head>
       <div className="flex min-h-screen flex-col">
         {/* Skip to main content link for accessibility */}

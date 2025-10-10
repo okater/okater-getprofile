@@ -1,11 +1,15 @@
 import SectionTitle from '@/components/shared/SectionTitle';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 import Slider, { Settings } from 'react-slick';
 import { badges } from '@/data/badges';
 
-const BadgesSection = ({ showTitle = true }: { showTitle?: boolean }) => {
+const BadgesSection = memo(({ showTitle = true }: { showTitle?: boolean }) => {
   const [autoplay, setAutoplay] = useState(true);
+
+  const handleAutoplayStop = useCallback(() => {
+    setAutoplay(false);
+  }, []);
 
   const badgesSettings: Settings = {
     dots: false,
@@ -17,7 +21,8 @@ const BadgesSection = ({ showTitle = true }: { showTitle?: boolean }) => {
     autoplay: autoplay,
     arrows: false,
     pauseOnHover: true,
-    onSwipe: () => setAutoplay(false)
+    onSwipe: handleAutoplayStop,
+    lazyLoad: 'ondemand'
   };
 
   return (
@@ -25,7 +30,7 @@ const BadgesSection = ({ showTitle = true }: { showTitle?: boolean }) => {
       {showTitle && <SectionTitle>Badges</SectionTitle>}
       
       {/* Mobile Carousel */}
-      <div className="mt-10 md:hidden" role="region" aria-label="Professional certifications and badges carousel">
+      <div className="mt-10 md:hidden" role="region" aria-label="Professional badges carousel">
         <Slider {...badgesSettings}>
           {badges.map((badge, index) => (
             <div key={index} className="px-2">
@@ -36,6 +41,8 @@ const BadgesSection = ({ showTitle = true }: { showTitle?: boolean }) => {
                   width={120}
                   height={120}
                   className="h-auto w-auto"
+                  loading="lazy"
+                  quality={80}
                 />
               </div>
             </div>
@@ -53,12 +60,16 @@ const BadgesSection = ({ showTitle = true }: { showTitle?: boolean }) => {
               width={120}
               height={120}
               className="h-auto w-auto"
+              loading="lazy"
+              quality={80}
             />
           </div>
         ))}
       </div>
     </>
   );
-};
+});
+
+BadgesSection.displayName = 'BadgesSection';
 
 export default BadgesSection;

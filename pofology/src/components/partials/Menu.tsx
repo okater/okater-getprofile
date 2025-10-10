@@ -1,16 +1,24 @@
 import { Theme, useTheme } from '@/hooks/use-theme';
-import { Dialog, Switch, Transition } from '@headlessui/react';
+import { Dialog, Transition } from '@headlessui/react';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useCallback, memo } from 'react';
 import { BsMoonStars, BsSun } from 'react-icons/bs';
 import { HiMenuAlt3 } from 'react-icons/hi';
 
-const Menu = () => {
+const Menu = memo(() => {
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  const handleSidebarToggle = useCallback(() => {
+    setSidebarOpen(!sidebarOpen);
+  }, [sidebarOpen]);
+
+  const handleSidebarClose = useCallback(() => {
+    setSidebarOpen(false);
+  }, []);
   return (
     <header className="header text-gray-700 dark:text-gray-200">
       <div className="mx-auto flex h-16 max-w-7xl items-center px-4 md:px-6">
@@ -115,7 +123,7 @@ const Menu = () => {
                   <button
                     type="button"
                     className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                    onClick={() => setSidebarOpen(false)}
+                    onClick={handleSidebarClose}
                     aria-label="Close navigation menu"
                   >
                     <span className="text-white" aria-hidden="true">&#10006;</span>
@@ -168,6 +176,8 @@ const Menu = () => {
       </Transition.Root>
     </header>
   );
-};
+});
+
+Menu.displayName = 'Menu';
 
 export default Menu;
