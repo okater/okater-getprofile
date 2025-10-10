@@ -142,6 +142,13 @@ const AppLayout: React.FC<Props> = ({
         <link rel="dns-prefetch" href="//github.com" />
       </Head>
       <div className="flex min-h-screen flex-col">
+        {/* Skip to main content link for accessibility */}
+        <a 
+          href="#main-content" 
+          className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:bg-primary-600 focus:text-white focus:px-4 focus:py-2 focus:no-underline"
+        >
+          Skip to main content
+        </a>
         <ScrollToTop
           smooth
           className="fixed bottom-16 right-8 z-10 cursor-pointer rounded-lg bg-primary-500 p-3 text-white transition-colors duration-150 hover:bg-primary-600 "
@@ -152,7 +159,7 @@ const AppLayout: React.FC<Props> = ({
           }
         />
         <Menu />
-        <div className="mt-16">{children}</div>
+        <main id="main-content" className="mt-16">{children}</main>
         <Footer />
       </div>
     </>

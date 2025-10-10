@@ -82,48 +82,72 @@ const ContactSection = () => {
             />
             
             <div className="grid gap-8 md:grid-cols-2">
-              <Input 
-                placeholder="Your Name" 
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-              />
-              <Input 
-                placeholder="Email Address" 
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
+              <div>
+                <label htmlFor="contact-name" className="sr-only">Your Name</label>
+                <Input 
+                  id="contact-name"
+                  placeholder="Your Name" 
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  aria-describedby="name-help"
+                />
+                <div id="name-help" className="sr-only">Enter your full name</div>
+              </div>
+              <div>
+                <label htmlFor="contact-email" className="sr-only">Email Address</label>
+                <Input 
+                  id="contact-email"
+                  placeholder="Email Address" 
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  aria-describedby="email-help"
+                />
+                <div id="email-help" className="sr-only">Enter your email address</div>
+              </div>
             </div>
 
             <div className="mt-8">
+              <label htmlFor="contact-subject" className="sr-only">Subject</label>
               <Input 
+                id="contact-subject"
                 placeholder="Subject" 
                 name="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
                 required
+                aria-describedby="subject-help"
               />
+              <div id="subject-help" className="sr-only">Enter the subject of your message</div>
             </div>
             <div className="mt-8">
+              <label htmlFor="contact-message" className="sr-only">Message</label>
               <TextArea 
+                id="contact-message"
                 placeholder="Message" 
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
                 required
+                aria-describedby="message-help"
               />
+              <div id="message-help" className="sr-only">Enter your message (minimum 10 characters)</div>
             </div>
             
             {submitStatus.type && (
-              <div className={`mt-4 p-3 rounded-lg ${
-                submitStatus.type === 'success' 
-                  ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100' 
-                  : 'bg-red-100 text-red-800 dark:bg-red-800 dark:text-red-100'
-              }`}>
+              <div 
+                className={`mt-4 p-3 rounded-lg ${
+                  submitStatus.type === 'success' 
+                    ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100' 
+                    : 'bg-red-100 text-red-800 dark:bg-red-800 dark:text-red-100'
+                }`}
+                role="alert"
+                aria-live="polite"
+              >
                 {submitStatus.message}
               </div>
             )}

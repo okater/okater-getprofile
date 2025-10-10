@@ -1,11 +1,19 @@
 import React from 'react';
 import DotBg from '@/components/partials/DotBg';
 
-const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface SectionTitleProps {
+  children: React.ReactNode;
+  level?: 2 | 3 | 4 | 5 | 6;
+  className?: string;
+}
+
+const SectionTitle: React.FC<SectionTitleProps> = ({ children, level = 3, className = '' }) => {
+  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+  
   return (
-    <div className="relative">
+    <div className={`relative ${className}`}>
       <DotBg className="absolute bottom-5 h-8 w-8 fill-current" />
-      <h3 className="pl-3 text-4xl font-bold">{children}</h3>
+      <Tag className="pl-3 text-4xl font-bold">{children}</Tag>
     </div>
   );
 };

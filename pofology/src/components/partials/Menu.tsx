@@ -63,18 +63,20 @@ const Menu = () => {
         </ul> */}
         <button
           type="button"
-          className="ml-auto transition-colors duration-150 hover:text-primary-500 md:-mt-0.5 md:ml-3"
+          className="ml-auto transition-colors duration-150 hover:text-primary-500 md:-mt-0.5 md:ml-3 p-2"
           onClick={() => toggleTheme()}
+          aria-label={theme === Theme.LIGHT ? 'Switch to dark mode' : 'Switch to light mode'}
         >
-          {theme === Theme.LIGHT ? <BsMoonStars size={20} /> : <BsSun size={20} />}
+          {theme === Theme.LIGHT ? <BsMoonStars size={20} aria-hidden="true" /> : <BsSun size={20} aria-hidden="true" />}
         </button>
-        <button
+        {/* <button
           type="button"
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="ml-5 flex text-gray-700 dark:text-gray-200 md:hidden"
+          className="ml-5 flex text-gray-700 dark:text-gray-200 md:hidden p-2"
+          aria-label="Open navigation menu"
         >
-          {/* <HiMenuAlt3 size={24} /> */}
-        </button>
+          <HiMenuAlt3 size={24} aria-hidden="true" />
+        </button> */}
       </div>
       {/* Mobile menu */}
       <Transition.Root show={sidebarOpen} as={Fragment}>
@@ -114,8 +116,9 @@ const Menu = () => {
                     type="button"
                     className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                     onClick={() => setSidebarOpen(false)}
+                    aria-label="Close navigation menu"
                   >
-                    <span className="text-white">&#10006;</span>
+                    <span className="text-white" aria-hidden="true">&#10006;</span>
                   </button>
                 </div>
               </Transition.Child>

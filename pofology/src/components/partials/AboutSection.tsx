@@ -7,7 +7,7 @@ import ProgressBar from '@/components/shared/ProgressBar';
 const AboutSection = () => {
   return (
     <>
-      <SectionTitle>About Me</SectionTitle>
+      <SectionTitle level={3}>About Me</SectionTitle>
 
       <div className="">
         {/* Bio */}

@@ -1,0 +1,103 @@
+/* Accessibility improvements */
+
+/* Focus indicators */
+*:focus {
+  outline: 2px solid #0284c7;
+  outline-offset: 2px;
+}
+
+/* Skip links */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-gray-700 {
+    color: #000000 !important;
+  }
+  
+  .text-gray-600 {
+    color: #1f2937 !important;
+  }
+  
+  .border-gray-600 {
+    border-color: #000000 !important;
+  }
+  
+  .bg-primary-500 {
+    background-color: #0c4a6e !important;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll {
+    animation: none;
+  }
+  
+  .transition-transform,
+  .transition-colors,
+  .transition-all {
+    transition: none !important;
+  }
+  
+  .hover\:scale-105:hover {
+    transform: none !important;
+  }
+}
+
+/* Improve touch targets */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Dark mode accessibility improvements */
+.dark .text-gray-400 {
+  color: #d1d5db;
+}
+
+.dark .text-gray-600 {
+  color: #9ca3af;
+}
+
+/* Form accessibility */
+input:invalid {
+  border-color: #dc2626;
+}
+
+input:valid {
+  border-color: #059669;
+}
+
+/* Loading state for better UX */
+.loading {
+  cursor: wait;
+}
+
+.loading * {
+  pointer-events: none;
+}

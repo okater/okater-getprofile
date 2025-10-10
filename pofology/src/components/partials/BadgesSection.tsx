@@ -25,7 +25,7 @@ const BadgesSection = ({ showTitle = true }: { showTitle?: boolean }) => {
       {showTitle && <SectionTitle>Badges</SectionTitle>}
       
       {/* Mobile Carousel */}
-      <div className="mt-10 md:hidden">
+      <div className="mt-10 md:hidden" role="region" aria-label="Professional certifications and badges carousel">
         <Slider {...badgesSettings}>
           {badges.map((badge, index) => (
             <div key={index} className="px-2">
