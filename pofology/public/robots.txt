@@ -7,10 +7,8 @@ Sitemap: https://www.okater.com/sitemap.xml
 # Block access to sensitive files
 Disallow: /contact-handler.php
 Disallow: /contact_rates.txt
-Disallow: /*.php$
-
-# Allow important pages
-Allow: /
+Disallow: /_next/
+Disallow: /api/
 
 # Crawl delay (optional - 1 second between requests)
 Crawl-delay: 1

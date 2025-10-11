@@ -137,10 +137,10 @@ const AppLayout: React.FC<Props> = ({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
-        {/* Preload critical fonts */}
+        {/* Preload critical fonts - most used weights first */}
         <link 
           rel="preload" 
-          href="/fonts/rubik-v14-latin-500.woff2" 
+          href="/fonts/rubik-v14-latin-regular.woff2" 
           as="font" 
           type="font/woff2" 
           crossOrigin="anonymous"
@@ -152,14 +152,35 @@ const AppLayout: React.FC<Props> = ({
           type="font/woff2" 
           crossOrigin="anonymous"
         />
+        <link 
+          rel="preload" 
+          href="/fonts/rubik-v14-latin-700.woff2" 
+          as="font" 
+          type="font/woff2" 
+          crossOrigin="anonymous"
+        />
+        
+        {/* Resource hints for critical assets */}
+        <link rel="preload" href="/fonts/rubik-v14-latin-regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/images/avatar/man.webp" as="image" type="image/webp" />
         
         {/* DNS Prefetch for performance */}
         <link rel="dns-prefetch" href="//www.linkedin.com" />
         <link rel="dns-prefetch" href="//github.com" />
+        <link rel="dns-prefetch" href="//www.salesforce.com" />
         
         {/* Performance hints */}
         <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />
         <meta name="format-detection" content="telephone=no" />
+        
+        {/* Early hints for critical resources */}
+        <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
+        <link rel="modulepreload" href="/_next/static/chunks/framework.js" />
+        <link rel="modulepreload" href="/_next/static/chunks/main.js" />
+        
+        {/* Resource hints for better performance */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="color-scheme" content="light dark" />
       </Head>
       <div className="flex min-h-screen flex-col">
         {/* Skip to main content link for accessibility */}

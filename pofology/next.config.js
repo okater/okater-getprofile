@@ -10,7 +10,8 @@ const nextConfig = {
   
   // Performance optimizations
   experimental: {
-    optimizePackageImports: ['react-icons', 'react-slick'],
+    optimizePackageImports: ['react-icons', 'react-slick', '@headlessui/react'],
+    scrollRestoration: true,
   },
   
   images: {
@@ -21,7 +22,7 @@ const nextConfig = {
     qualities: [50, 75, 80, 85, 90, 95, 100],
   },
   
-  // Bundle analyzer for development
+  // Bundle analyzer and optimization
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Reduce bundle size by removing unused dependencies
     config.resolve.alias = {
@@ -35,6 +36,31 @@ const nextConfig = {
       config.resolve.alias = {
         ...config.resolve.alias,
         'react-icons/lib': 'react-icons/lib/esm',
+      };
+      
+      // Remove unused CSS and JS
+      config.optimization.usedExports = true;
+      config.optimization.sideEffects = false;
+      
+      // Optimize chunks
+      config.optimization.splitChunks = {
+        ...config.optimization.splitChunks,
+        chunks: 'all',
+        cacheGroups: {
+          ...config.optimization.splitChunks.cacheGroups,
+          icons: {
+            test: /[\\/]node_modules[\\/]react-icons[\\/]/,
+            name: 'icons',
+            chunks: 'all',
+            priority: 10,
+          },
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+            priority: 5,
+          },
+        },
       };
     }
     

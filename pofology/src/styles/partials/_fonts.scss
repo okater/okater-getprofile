@@ -87,6 +87,7 @@
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 700;
+    font-display: swap; /* Improves font loading performance */
     src: url('../../../public/fonts/rubik-v14-latin-700.eot');
     /* IE9 Compat Modes */
     src: local(''),
@@ -107,6 +108,7 @@
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 800;
+    font-display: swap; /* Improves font loading performance */
     src: url('../../../public/fonts/rubik-v14-latin-800.eot');
     /* IE9 Compat Modes */
     src: local(''),
@@ -127,6 +129,7 @@
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 900;
+    font-display: swap; /* Improves font loading performance */
     src: url('../../../public/fonts/rubik-v14-latin-900.eot');
     /* IE9 Compat Modes */
     src: local(''),

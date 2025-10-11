@@ -26,6 +26,7 @@ const HeroSection = () => {
             alt="Oleksandr Katerynchuk - Salesforce Commerce Cloud Tech Lead"
             className="block"
             priority
+            fetchPriority="high"
           />
         </div>
         <h1 className="mt-4 text-3xl font-bold">Oleksandr Katerynchuk</h1>

@@ -51,7 +51,7 @@ const BadgesSection = memo(({ showTitle = true }: { showTitle?: boolean }) => {
       </div>
 
       {/* Desktop Grid */}
-      <div className="mt-10 hidden md:grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-2">
+      <div className="mt-10 h-0 md:h-auto overflow-hidden md:overflow-visible grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-2">
         {badges.map((badge, index) => (
           <div key={index} className="flex items-center justify-center p-4 transition-transform hover:scale-105">
             <Image
