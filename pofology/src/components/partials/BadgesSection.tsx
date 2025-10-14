@@ -22,7 +22,15 @@ const BadgesSection = memo(({ showTitle = true }: { showTitle?: boolean }) => {
     arrows: false,
     pauseOnHover: true,
     onSwipe: handleAutoplayStop,
-    lazyLoad: 'ondemand'
+    lazyLoad: 'ondemand',
+    useCSS: true,
+    useTransform: true,
+    accessibility: true,
+    focusOnSelect: false,
+    draggable: true,
+    touchMove: true,
+    swipeToSlide: true,
+    waitForAnimate: false
   };
 
   return (

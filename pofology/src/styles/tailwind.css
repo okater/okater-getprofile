@@ -1,3 +1,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/* Import performance and accessibility optimizations */
+@import './fonts.css';
+@import './accessibility.css';
+@import './performance.css';

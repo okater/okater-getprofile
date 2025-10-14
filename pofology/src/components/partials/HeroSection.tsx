@@ -30,10 +30,10 @@ const HeroSection = () => {
           />
         </div>
         <h1 className="mt-4 text-3xl font-bold">Oleksandr Katerynchuk</h1>
-        <h2 className="mt-2 flex gap-1">
+        <p className="mt-2 flex gap-1 md:text-lg">
           I'm a Salesforce Commerce Cloud
           <span ref={typedRef} className="text-primary-500 font-semibold"></span>
-        </h2>
+        </p>
         <nav className="mt-4" aria-label="Social media links">
           <div className="flex gap-5">
             <Link

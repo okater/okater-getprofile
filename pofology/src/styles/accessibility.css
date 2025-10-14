@@ -30,13 +30,22 @@
   white-space: normal;
 }
 
-/* Improved contrast ratios */
+/* Improved contrast ratios - WCAG AA compliant */
 .text-gray-400 {
-  color: #6b7280 !important; /* Better contrast than default */
+  color: #475569 !important; /* slate-600 - Better contrast ratio 4.5:1+ */
 }
 
 .text-gray-500 {
-  color: #4b5563 !important; /* Better contrast than default */
+  color: #374151 !important; /* gray-700 - Better contrast ratio 4.5:1+ */
+}
+
+.text-gray-600 {
+  color: #1f2937 !important; /* gray-800 - Strong contrast ratio 7:1+ */
+}
+
+/* Specific improvements for better readability */
+.text-gray-700 {
+  color: #111827 !important; /* gray-900 - Maximum contrast */
 }
 
 /* High contrast mode support */
@@ -92,29 +101,31 @@
   }
 }
 
-/* Improve touch targets - WCAG AA minimum 44x44px */
+/* Improve touch targets - WCAG AA minimum 44x44px, AAA minimum 44x44px */
 button,
 a,
 .slick-dots li button,
 .slick-arrow {
-  min-height: 44px;
-  min-width: 44px;
+  min-height: 48px; /* Increased to 48px for better accessibility */
+  min-width: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 12px; /* Adequate padding for larger touch area */
 }
 
-/* Ensure adequate spacing between touch targets */
+/* Ensure adequate spacing between touch targets - minimum 8px spacing */
 .slick-dots li {
-  margin: 0 8px;
+  margin: 0 12px; /* Increased spacing */
 }
 
 /* Improve slider arrow touch targets */
 .slick-prev,
 .slick-next {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   z-index: 2;
+  padding: 12px;
 }
 
 .slick-prev:before,
@@ -122,24 +133,66 @@ a,
   font-size: 24px;
 }
 
-/* Social media links spacing */
+/* Social media links spacing - ensure 44px minimum */
 nav[aria-label="Social media links"] .flex {
-  gap: 12px; /* Increased gap for better touch target spacing */
+  gap: 16px; /* Increased gap for better touch target spacing */
+}
+
+nav[aria-label="Social media links"] a {
+  min-height: 48px;
+  min-width: 48px;
+  padding: 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button improvements */
+.btn,
+button,
+[role="button"] {
+  min-height: 48px;
+  min-width: 48px;
+  padding: 12px 16px;
+  margin: 4px; /* Minimum spacing between buttons */
+}
+
+/* Form controls */
+input,
+textarea,
+select {
+  min-height: 48px;
+  padding: 12px;
 }
 
 /* Special handling for mobile devices */
 @media (hover: none) and (pointer: coarse) {
   button,
-  a {
-    min-height: 48px; /* Even larger for mobile */
-    min-width: 48px;
-    padding: 12px;
+  a,
+  input,
+  textarea,
+  select {
+    min-height: 52px; /* Even larger for mobile */
+    min-width: 52px;
+    padding: 16px;
   }
   
   /* Carousel controls for mobile */
+  .slick-dots li {
+    margin: 0 16px;
+  }
+  
   .slick-dots li button {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
+  }
+  
+  /* Social links for mobile */
+  nav[aria-label="Social media links"] a {
+    min-height: 52px;
+    min-width: 52px;
+    padding: 16px;
   }
 }
 

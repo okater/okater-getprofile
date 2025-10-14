@@ -7,7 +7,7 @@ import ProgressBar from '@/components/shared/ProgressBar';
 const AboutSection = () => {
   return (
     <>
-      <SectionTitle level={3}>About Me</SectionTitle>
+      <SectionTitle level={2}>About Me</SectionTitle>
 
       <div className="">
         {/* Bio */}
@@ -30,14 +30,14 @@ const AboutSection = () => {
         {/* <div className="grid grid-cols-2 gap-x-6 gap-y-4">
           <div className="">
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">Backend</h6>
+              <h4 className="font-semibold">Backend</h4>
               <p>85%</p>
             </div>
             <ProgressBar color="blue" progress={85} />
           </div>
           <div className="">
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">Frontend</h6>
+              <h4 className="font-semibold">Frontend</h4>
               <p>95%</p>
             </div>
             <ProgressBar color="amber" progress={95} />
@@ -45,14 +45,14 @@ const AboutSection = () => {
 
           <div className="">
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">Mobile App</h6>
+              <h4 className="font-semibold">Mobile App</h4>
               <p>75%</p>
             </div>
             <ProgressBar color="rose" progress={75} />
           </div>
           <div className="">
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">UI/UX</h6>
+              <h4 className="font-semibold">UI/UX</h4>
               <p>90%</p>
             </div>
             <ProgressBar color="green" progress={80} />

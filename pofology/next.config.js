@@ -31,18 +31,26 @@ const nextConfig = {
       'lodash': 'lodash-es',
     };
     
-    // Tree shake unused code
-    if (!dev && !isServer) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        'react-icons/lib': 'react-icons/lib/esm',
-      };
-      
-      // Remove unused CSS and JS
-      config.optimization.usedExports = true;
-      config.optimization.sideEffects = false;
-      
-      // Optimize chunks
+      // Tree shake unused code and use modern ES modules
+      if (!dev && !isServer) {
+        config.resolve.alias = {
+          ...config.resolve.alias,
+          'react-icons/lib': 'react-icons/lib/esm',
+        };
+        
+        // Remove unused CSS and JS, optimize for modern browsers
+        config.optimization.usedExports = true;
+        config.optimization.sideEffects = false;
+        
+        // Target modern browsers only
+        config.target = 'web';
+        config.resolve.mainFields = ['browser', 'module', 'main'];
+        
+        // Enable modern JavaScript features
+        config.experiments = {
+          ...config.experiments,
+          topLevelAwait: true,
+        };      // Optimize chunks
       config.optimization.splitChunks = {
         ...config.optimization.splitChunks,
         chunks: 'all',
@@ -67,6 +75,8 @@ const nextConfig = {
     return config;
   },
   
+
+
   async exportPathMap() {
     return {
       '/': { page: '/' },

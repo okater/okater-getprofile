@@ -39,6 +39,13 @@ img[loading="lazy"] {
 
 .slick-slide {
   transform: translateZ(0);
+  will-change: transform;
+  contain: layout style paint;
+}
+
+.slick-track {
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 /* Reduce paint times */
@@ -169,4 +176,64 @@ body {
 
 .aspect-video {
   aspect-ratio: 16 / 9;
+}
+
+/* Prevent layout shift for images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Critical resource optimization */
+.critical-resource {
+  font-display: swap;
+}
+
+/* Reduce cumulative layout shift */
+.container {
+  contain: layout style;
+}
+
+/* Performance optimizations for large lists */
+.large-list {
+  contain: strict;
+  content-visibility: auto;
+}
+
+/* Optimize font loading */
+@supports (font-display: swap) {
+  * {
+    font-display: swap;
+  }
+}
+
+/* Progressive image loading */
+.progressive-image {
+  background-color: #f3f4f6;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.3s;
+}
+
+.progressive-image.loaded {
+  opacity: 1;
+}
+
+/* Intersection observer optimization */
+.observe-intersection {
+  content-visibility: auto;
+  contain-intrinsic-height: 200px;
+}
+
+/* Touch optimization */
+@media (hover: none) and (pointer: coarse) {
+  .hover-effects {
+    transform: none !important;
+  }
+  
+  .slick-slider {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
 }

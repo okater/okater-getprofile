@@ -137,7 +137,7 @@ const AppLayout: React.FC<Props> = ({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
-        {/* Preload critical fonts - most used weights first */}
+        {/* Critical font preloading with font-display: swap */}
         <link 
           rel="preload" 
           href="/fonts/rubik-v14-latin-regular.woff2" 
@@ -160,9 +160,15 @@ const AppLayout: React.FC<Props> = ({
           crossOrigin="anonymous"
         />
         
-        {/* Resource hints for critical assets */}
-        <link rel="preload" href="/fonts/rubik-v14-latin-regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/images/avatar/man.webp" as="image" type="image/webp" />
+        {/* Resource hints for critical assets - LCP optimization */}
+        <link rel="preload" href="/images/avatar/man.webp" as="image" type="image/webp" fetchPriority="high" />
+        <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/_next/static/css/app.css" as="style" />
+        <link rel="preload" href="/_next/static/chunks/webpack.js" as="script" />
+        <link rel="preload" href="/_next/static/chunks/framework.js" as="script" />
+        <link rel="preload" href="/_next/static/chunks/main.js" as="script" />
+        <link rel="preload" href="/_next/static/chunks/pages/_app.js" as="script" />
+        <link rel="preload" href="/_next/static/chunks/pages/index.js" as="script" />
         
         {/* DNS Prefetch for performance */}
         <link rel="dns-prefetch" href="//www.linkedin.com" />
@@ -173,14 +179,35 @@ const AppLayout: React.FC<Props> = ({
         <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />
         <meta name="format-detection" content="telephone=no" />
         
-        {/* Early hints for critical resources */}
-        <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
-        <link rel="modulepreload" href="/_next/static/chunks/framework.js" />
-        <link rel="modulepreload" href="/_next/static/chunks/main.js" />
+        {/* Critical resource discovery for LCP */}
+        <link rel="prefetch" href="/images/testimonials/user-1.webp" />
+        <link rel="prefetch" href="/images/testimonials/user-2.webp" />
+        <link rel="prefetch" href="/images/testimonials/user-3.webp" />
+        <link rel="prefetch" href="/images/brands/under-armour.webp" />
+        <link rel="prefetch" href="/images/brands/hot-topic.webp" />
         
         {/* Resource hints for better performance */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="color-scheme" content="light dark" />
+        
+        {/* Service Worker Registration */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                      console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                      console.log('SW registration failed: ', registrationError);
+                    });
+                });
+              }
+            `,
+          }}
+        />
       </Head>
       <div className="flex min-h-screen flex-col">
         {/* Skip to main content link for accessibility */}

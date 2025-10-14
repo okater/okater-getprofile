@@ -65,3 +65,18 @@ Options -Indexes
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
+
+# Cache static assets for 1 year
+<FilesMatch "\.(css|js|png|jpg|jpeg|webp|avif|svg|woff|woff2|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Cache HTML for 10 days
+<FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=864000"
+</FilesMatch>
+
+# Security headers
+Header always set X-Frame-Options "DENY"
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
