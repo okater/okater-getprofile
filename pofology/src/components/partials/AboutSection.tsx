@@ -15,7 +15,7 @@ const AboutSection = () => {
           <p className="indent-3 leading-8">
             Hi there! 👋 My name is Oleksandr Katerynchuk. I'm based in Chicago, IL 🏠
           </p>
-          <p className="indent-3 leading-8">I am a Salesforce B2C Commerce (SFCC) Technical Lead with extensive experience in e-commerce development.
+          <p className="indent-3 leading-8">I am a Salesforce Commerce Cloud (SFCC / Agentforce Commerce) Success Architect with extensive experience in e-commerce development.
           </p>
           <p className="indent-3 leading-8">
             I specialize in building scalable and efficient Salesforce Commerce Cloud solutions.

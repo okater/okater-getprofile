@@ -11,6 +11,7 @@ import {
   FiStar,
   FiTriangle,
 } from 'react-icons/fi';
+import { SiSalesforce } from 'react-icons/si';
 
 const HeroBackground = () => {
   return (
@@ -34,16 +35,16 @@ const HeroBackground = () => {
       />
       <FiHexagon size={30} className="absolute top-96 left-1/4 hidden animate-spin text-purple-500 sm:inline-block" />
       <ul className={styles.circles}>
-        <li className="bg-primary-300"></li>
-        <li className="bg-purple-300"></li>
-        <li className="bg-indigo-300"></li>
-        <li className="bg-emerald-300"></li>
-        <li className="bg-teal-300"></li>
-        <li className="bg-pink-300"></li>
-        <li className="bg-blue-300"></li>
-        <li className="bg-orange-300"></li>
-        <li className="bg-yellow-300"></li>
-        <li className="bg-gray-200 dark:bg-gray-700"></li>
+        <li><SiSalesforce size={200} className="text-primary-300" /></li>
+        <li><SiSalesforce size={75} className="text-purple-300" /></li>
+        <li><SiSalesforce size={50} className="text-indigo-300" /></li>
+        <li><SiSalesforce size={150} className="text-emerald-300" /></li>
+        <li><SiSalesforce size={75} className="text-teal-300" /></li>
+        <li><SiSalesforce size={130} className="text-pink-300" /></li>
+        <li><SiSalesforce size={200} className="text-blue-300" /></li>
+        <li><SiSalesforce size={63} className="text-orange-300" /></li>
+        <li><SiSalesforce size={63} className="text-yellow-300" /></li>
+        <li><SiSalesforce size={130} className="text-gray-200 dark:text-gray-700" /></li>
       </ul>
     </>
   );

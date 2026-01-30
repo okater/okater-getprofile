@@ -10,12 +10,20 @@ export const certifications: Certification[] = [
     alt: 'Salesforce B2C Commerce Developer Certification'
   },
   {
+    src: '/images/certifications/cert_data_360.webp',
+    alt: 'Salesforce Data Cloud Consultant Certification'
+  },
+  {
     src: '/images/certifications/cert_agentforce_specialist.webp',
     alt: 'Salesforce Agentforce Specialist Certification'
   },
   {
     src: '/images/certifications/cert_sf_js_dev.webp',
     alt: 'Salesforce JavaScript Developer Certification'
+  },
+  {
+    src: '/images/certifications/cert_sf_platform_app_builder.webp',
+    alt: 'Salesforce Platform App Builder Certification'
   },
   {
     src: '/images/certifications/cert_cc_einstein.webp',

@@ -14,8 +14,16 @@ export const badges: Badge[] = [
     alt: 'Agentforce Legend 2025'
   },
   {
+    src: '/images/badges/data_cloud.webp',
+    alt: 'Certified Data Cloud Consultant'
+  },
+  {
     src: '/images/badges/sf_agentforce.webp',
     alt: 'Certified Agentforce Specialist'
+  },
+  {
+    src: '/images/badges/sf_app_builder.webp',
+    alt: 'Certified Platform App Builder'
   },
   {
     src: '/images/badges/sf_js_developer.webp',

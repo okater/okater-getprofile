@@ -23,7 +23,7 @@ const HeroSection = () => {
             src="/images/avatar/man.webp" 
             width={180} 
             height={180} 
-            alt="Oleksandr Katerynchuk - Salesforce Commerce Cloud Tech Lead"
+            alt="Oleksandr Katerynchuk - Salesforce Commerce Cloud Success Architect"
             className="block"
             priority
             fetchPriority="high"
@@ -31,8 +31,7 @@ const HeroSection = () => {
         </div>
         <h1 className="mt-4 text-3xl font-bold">Oleksandr Katerynchuk</h1>
         <p className="mt-2 flex gap-1 md:text-lg">
-          I'm a Salesforce Commerce Cloud
-          <span ref={typedRef} className="text-primary-500 font-semibold"></span>
+          Salesforce Commerce Cloud Success Architect
         </p>
         <nav className="mt-4" aria-label="Social media links">
           <div className="flex gap-5">
@@ -62,13 +61,13 @@ const HeroSection = () => {
             </Link>
           </div>
         </nav>
-        <Link 
+        {/* <Link 
           href="https://www.linkedin.com/in/okater/" 
           target="_blank" 
           rel="noopener noreferrer"
           aria-label="Contact Oleksandr Katerynchuk for hiring opportunities">
           <Button className="mt-5 px-8">Hire Me</Button>
-        </Link>
+        </Link> */}
       </div>
       <div className="absolute bottom-0 flex flex-col items-center" role="presentation" aria-hidden="true">
         <p className="mb-3 text-sm text-gray-800 dark:text-gray-200">Scroll Down</p>
