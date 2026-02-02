@@ -17,12 +17,12 @@ interface Props {
 const AppLayout: React.FC<Props> = ({ 
   children, 
   title,
-  description = 'Experienced Salesforce Commerce Cloud Tech Lead and Architect specializing in B2C Commerce, JavaScript development, and e-commerce solutions. Available for consulting and development projects.',
-  keywords = 'Salesforce Commerce Cloud, B2C Commerce, Tech Lead, Architect, JavaScript Developer, E-commerce, SFCC, Salesforce Developer, Commerce Cloud Einstein, Agentforce',
+  description = 'Commerce Cloud Success Architect at Salesforce, specializing in B2C Commerce, JavaScript development, and e-commerce solutions. Available for consulting and development projects.',
+  keywords = 'Salesforce Commerce Cloud, Success Architect, Agentforce Commerce, B2C Commerce, Tech Lead, Architect, JavaScript Developer, E-commerce, SFCC, Salesforce Developer, Commerce Cloud Einstein, Agentforce',
   ogImage = '/images/og-image.webp',
   canonical
 }) => {
-  const pageTitle = title || 'Oleksandr Katerynchuk - Salesforce Commerce Cloud Tech Lead';
+  const pageTitle = title || 'Oleksandr Katerynchuk - Commerce Cloud Success Architect at Salesforce';
   const siteUrl = 'https://www.okater.com';
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
   

@@ -5,11 +5,12 @@ import { FiLinkedin, FiGithub, FiCloud } from 'react-icons/fi';
 import Button from '@/components/form/Button';
 import HeroBackground from './HeroBackground';
 import { useTyped } from '@/hooks/useTyped';
+import { SiSalesforce } from 'react-icons/si';
 
 const HeroSection = () => {
   const typedRef = useTyped({
     strings: ['Salesforce'],
-    typeSpeed: 90,
+    typeSpeed: 75,
     backSpeed: 30,
     loop: false,
   });
@@ -32,6 +33,7 @@ const HeroSection = () => {
         <h1 className="mt-4 text-3xl font-bold">Oleksandr Katerynchuk</h1>
         <p className="mt-2 flex gap-1 md:text-lg">
           Commerce Cloud Success Architect at 
+          <SiSalesforce size={30} className="text-primary-500" />
           <span ref={typedRef} className="text-primary-500 font-semibold"></span>
         </p>
         <nav className="mt-4" aria-label="Social media links">
