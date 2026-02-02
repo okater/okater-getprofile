@@ -23,7 +23,7 @@ const HeroSection = () => {
             src="/images/avatar/man.webp" 
             width={180} 
             height={180} 
-            alt="Oleksandr Katerynchuk - Salesforce Commerce Cloud Success Architect"
+            alt="Oleksandr Katerynchuk - Commerce Cloud Success Architect at Salesforce"
             className="block"
             priority
             fetchPriority="high"
@@ -31,7 +31,7 @@ const HeroSection = () => {
         </div>
         <h1 className="mt-4 text-3xl font-bold">Oleksandr Katerynchuk</h1>
         <p className="mt-2 flex gap-1 md:text-lg">
-          Salesforce Commerce Cloud Success Architect
+          Commerce Cloud Success Architect at Salesforce
         </p>
         <nav className="mt-4" aria-label="Social media links">
           <div className="flex gap-5">

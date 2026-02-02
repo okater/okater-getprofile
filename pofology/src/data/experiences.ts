@@ -2,6 +2,20 @@ import { Experience } from '@/types';
 
 export const experiences: Experience[] = [
   {
+    jobTitle: 'Commerce Cloud Success Architect',
+    company: 'Salesforce',
+    startDate: 'Feb 2022',
+    endDate: 'present',
+    responsibilities: [
+      'Provide high-velocity architectural advisory and strategic guidance to enterprise clients within the Signature Success Plan',
+      'Serve as a Lead Subject Matter Expert for B2C Commerce (Demandware), translating complex business challenges into scalable, secure technical solutions',
+      'Architect and champion advanced platform implementations, including Headless Commerce (PWA Kit, SCAPI/OCAPI), SFRA, and legacy Script/Pipelines',
+      'Advise a diverse range of stakeholders—from developers to executives—on performance optimization, enterprise data modeling, and DevOps best practices',
+      'Collaborate within an international expert team to design and champion complex architectural standards for global B2C storefronts',
+    ],
+  },
+
+  {
     jobTitle: 'Salesforce Commerce Cloud Tech Lead',
     company: 'DEPT®',
     startDate: 'Sep 2022',

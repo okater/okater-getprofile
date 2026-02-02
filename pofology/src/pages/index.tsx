@@ -19,9 +19,9 @@ import type { GetServerSideProps, NextPage } from 'next';
 const Home: NextPage = () => {
   return (
     <AppLayout 
-      title="Oleksandr Katerynchuk - Salesforce Commerce Cloud Tech Lead & Architect"
-      description="Experienced Salesforce Commerce Cloud Tech Lead with 8+ years in e-commerce development. Certified B2C Commerce Architect & Developer. Specializing in SFCC, JavaScript, and enterprise e-commerce solutions. Available for consulting projects."
-      keywords="Salesforce Commerce Cloud Tech Lead, SFCC Architect, B2C Commerce Developer, JavaScript Expert, E-commerce Consultant, Salesforce Certified, Commerce Cloud Einstein, Agentforce Specialist, Technical Leadership, Software Architecture, Under Armour, Hot Topic, Shoe Carnival"
+      title="Oleksandr Katerynchuk - Commerce Cloud Success Architect at Salesforce"
+      description="Experienced Commerce Cloud Success Architect at Salesforce. Certified B2C Commerce Architect & Developer. Specializing in SFCC, JavaScript, and enterprise e-commerce solutions."
+      keywords="Commerce Cloud Success Architect, Salesforce Success Architect, Salesforce Commerce Cloud Tech Lead, SFCC Architect, B2C Commerce Developer, JavaScript Expert, E-commerce Consultant, Salesforce Certified, Commerce Cloud Einstein, Agentforce Specialist, Technical Leadership, Software Architecture, Under Armour, Hot Topic, Shoe Carnival"
       canonical="/"
     >
       <HeroSection />

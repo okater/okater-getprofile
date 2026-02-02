@@ -31,7 +31,7 @@ const AppLayout: React.FC<Props> = ({
     '@type': 'Person',
     'name': 'Oleksandr Katerynchuk',
     'alternateName': 'okater',
-    'jobTitle': 'Salesforce Commerce Cloud Tech Lead',
+    'jobTitle': 'Commerce Cloud Success Architect at Salesforce',
     'description': description,
     'url': siteUrl,
     'image': `${siteUrl}${ogImage}`,
@@ -41,6 +41,7 @@ const AppLayout: React.FC<Props> = ({
     ],
     'knowsAbout': [
       'Salesforce Commerce Cloud',
+      'Agentforce Commerce',
       'B2C Commerce',
       'JavaScript',
       'TypeScript',
@@ -58,17 +59,37 @@ const AppLayout: React.FC<Props> = ({
         'name': 'Salesforce Certified B2C Commerce Developer'
       },
       {
+        '@type': 'EducationalOccupationalCredential', 
+        'name': 'Salesforce Certified Data Cloud Consultant'
+      },
+      {
+        '@type': 'EducationalOccupationalCredential', 
+        'name': 'Salesforce Certified Platform App Builder'
+      },
+      {
         '@type': 'EducationalOccupationalCredential',
         'name': 'Salesforce Certified JavaScript Developer'
       },
       {
         '@type': 'EducationalOccupationalCredential', 
         'name': 'Salesforce Certified Agentforce Specialist'
+      },
+      {
+        '@type': 'EducationalOccupationalCredential', 
+        'name': 'Salesforce Certified Platform Foundations'
+      },
+      {
+        '@type': 'EducationalOccupationalCredential', 
+        'name': 'Salesforce Certified AI Associate'
+      },
+      {
+        '@type': 'EducationalOccupationalCredential', 
+        'name': 'Commerce Cloud Einstein Accredited Professional'
       }
     ],
     'worksFor': {
       '@type': 'Organization',
-      'name': 'Freelance/Consulting'
+      'name': 'Salesforce'
     }
   };
 
@@ -105,8 +126,8 @@ const AppLayout: React.FC<Props> = ({
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={`${siteUrl}${ogImage}`} />
-        <meta property="og:image:alt" content="Oleksandr Katerynchuk - Salesforce Commerce Cloud Tech Lead" />
-        <meta property="og:site_name" content="Oleksandr Katerynchuk Portfolio" />
+        <meta property="og:image:alt" content="Oleksandr Katerynchuk - Commerce Cloud Success Architect at Salesforce" />
+        <meta property="og:site_name" content="Oleksandr Katerynchuk personal web-site" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter */}
@@ -115,7 +136,7 @@ const AppLayout: React.FC<Props> = ({
         <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={`${siteUrl}${ogImage}`} />
-        <meta property="twitter:image:alt" content="Oleksandr Katerynchuk - Salesforce Commerce Cloud Tech Lead" />
+        <meta property="twitter:image:alt" content="Oleksandr Katerynchuk - Commerce Cloud Success Architect at Salesforce" />
         
         {/* LinkedIn */}
         <meta property="linkedin:owner" content="okater" />
@@ -123,7 +144,7 @@ const AppLayout: React.FC<Props> = ({
         {/* Additional SEO Meta Tags */}
         <meta name="theme-color" content="#3B82F6" />
         <meta name="msapplication-TileColor" content="#3B82F6" />
-        <meta name="application-name" content="Oleksandr Katerynchuk Portfolio" />
+        <meta name="application-name" content="Oleksandr Katerynchuk personal web-site" />
         
         {/* Structured Data */}
         <script
