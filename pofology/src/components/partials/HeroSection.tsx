@@ -8,10 +8,10 @@ import { useTyped } from '@/hooks/useTyped';
 
 const HeroSection = () => {
   const typedRef = useTyped({
-    strings: ['Architect', 'TechLead', 'Developer'],
-    typeSpeed: 60,
+    strings: ['Salesforce'],
+    typeSpeed: 90,
     backSpeed: 30,
-    loop: true,
+    loop: false,
   });
 
   return (
@@ -31,7 +31,8 @@ const HeroSection = () => {
         </div>
         <h1 className="mt-4 text-3xl font-bold">Oleksandr Katerynchuk</h1>
         <p className="mt-2 flex gap-1 md:text-lg">
-          Commerce Cloud Success Architect at Salesforce
+          Commerce Cloud Success Architect at 
+          <span ref={typedRef} className="text-primary-500 font-semibold"></span>
         </p>
         <nav className="mt-4" aria-label="Social media links">
           <div className="flex gap-5">
